@@ -1,0 +1,36 @@
+@color: #333333;
+@colorHover: #333333;
+@aColor: #333333;
+@aColorHover: #0397ed;
+@placeholder: #acacac;
+@size:@16px;
+@titleSize:20px;
+@fontFamliy:'Microsoft YaHei';
+.transition(@time: 0.3s, @delay: 0s) {
+    transition: top @time @delay, transform @time @delay , opacity @time @delay, color @time @delay,width @time @delay,background-color @time @delay,margin-left @time @delay;
+}
+
+.animate(@name , @time: 1s, @delay: 0s) {
+    animation: @name @time, @delay
+}
+
+.transformImg() {
+    .transition(1s);
+    &:hover {
+        transform: scale3d(1.02, 1.02, 1.02)
+    }
+}
+
+.ellipsis(@num: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @num;
+    -webkit-box-orient: vertical;
+}
+
+.nowrapeElipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
